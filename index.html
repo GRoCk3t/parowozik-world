@@ -1,162 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parowozik world</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .logo {
-            margin-top: 30px;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .logo img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .logo h1 {
-            font-size: 2.5em;
-            margin-top: 15px;
-        }
-
-        .menu {
-            margin-top: 20px;
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .menu th {
-            background-color: #333333;
-            padding: 15px;
-            text-align: center;
-            font-size: 1.2em;
-            border: 1px solid #555555;
-        }
-
-        .menu td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #555555;
-            background-color: #111111;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu td:hover {
-            background-color: #333333;
-        }
-
-        .menu td a {
-            color: #ffffff;
-            text-decoration: none;
-            display: block;
-        }
-
-        .menu td a:hover {
-            text-decoration: underline;
-        }
-
-        .articles {
-            margin-top: 60px;
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .articles th {
-            background-color: #333333;
-            padding: 15px;
-            text-align: left;
-            font-size: 1.1em;
-            border: 1px solid #555555;
-        }
-
-        .articles td {
-            padding: 15px;
-            border: 1px solid #555555;
-            background-color: #111111;
-        }
-
-        .articles tr:hover {
-            background-color: #1a1a1a;
-        }
-
-        .article-title {
-            color: #87ceeb;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .article-title:hover {
-            text-decoration: underline;
-            color: #00bfff;
-        }
-
-        .article-date {
-            color: #888888;
-            font-size: 0.9em;
-        }
-
-        .article-category {
-            color: #90ee90;
-            font-size: 0.85em;
-        }
-
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            pointer-events: none;
-            user-select: none;
-            animation: fall linear forwards;
-            width: 4px;
-            height: 4px;
-            background-color: #ffffff;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 1;
-            }
-            25% {
-                transform: translateY(25vh) translateX(20px);
-            }
-            50% {
-                transform: translateY(50vh) translateX(-15px);
-            }
-            75% {
-                transform: translateY(75vh) translateX(25px);
-            }
-            100% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-        }
-    </style>
 </head>
 <body>
+
     <div class="logo">
-        <h1>Parowozik world 🚂</h1>
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <h1>Parowozik world 🚂</h1>
+            </a>
     </div>
 
     <table class="menu">
@@ -167,34 +24,37 @@
         </thead>
         <tbody>
              <tr>
-                <td><a href="#about">Prawie daily wpis</a></td>
+                <td><a href="daily.html">Prawie daily wpis</a></td>
             </tr>
             <tr>
-                <td><a href="#about">Muzyka</a></td>
+                <td><a href="muzyka.html">Muzyka</a></td>
             </tr>
             <tr>
-                <td><a href="#projects">Książki</a></td>
+                <td><a href="ksiazki.html">Książki</a></td>
             </tr>
             <tr>
-                <td><a href="#blog">Filmy i seriale</a></td>
+                <td><a href="filmy.html">Filmy i seriale</a></td>
             </tr>
             <tr>
-                <td><a href="#contact">Anime</a></td>
+                <td><a href="anime.html">Anime</a></td>
             </tr>
             <tr>
-                <td><a href="#gallery">Gry rytmiczne</a></td>
+                <td><a href="rytmiczne.html">Gry rytmiczne</a></td>
             </tr>
              <tr>
-                <td><a href="#gallery">Simracing</a></td>
+                <td><a href="simracing.html">Simracing</a></td>
+            </tr>
+            <tr>
+                <td><a href="architektura.html">Architektura</a></td>
             </tr>
              <tr>
-                <td><a href="#gallery">Góry i natura</a></td>
+                <td><a href="wycieczki.html">Góry i natura</a></td>
             </tr>
              <tr>
-                <td><a href="#gallery">Wyścigi, rajdy</a></td>
+                <td><a href="motorsport.html">Motorsport</a></td>
             </tr>
              <tr>
-                <td><a href="#gallery">Elektroniczne projekty</a></td>
+                <td><a href="projekty.html">Elektroniczne projekty</a></td>
             </tr>
         </tbody>
     </table>
@@ -236,23 +96,7 @@
         </tbody>
     </table>
 
-    <script>
-        function createSnow() {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            
-            // Random horizontal position
-            snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.animationDuration = Math.random() * 4 + 3 + 's';
-            
-            document.body.appendChild(snowflake);
-            
-            // Remove snowflake after it falls off screen
-            setTimeout(() => snowflake.remove(), 8000);
-        }
-        
-        // Create snowflakes continuously
-        setInterval(createSnow, 100);
-    </script>
+    <script src="scripts.js"></script>
+
 </body>
 </html>
